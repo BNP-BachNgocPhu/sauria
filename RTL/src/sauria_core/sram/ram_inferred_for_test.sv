@@ -51,9 +51,32 @@ module ram_inferred #(
 
 logic [SRAM_W-1:0] mem [(2**ADR_W)-1:0];
 
+// Task to dump memory contents to file
+task dump_mem();
+    integer i;
+    integer file_handle;
+    begin
+        file_handle = $fopen("memory_dump.txt", "w");
+        if (file_handle == 0) begin
+            $display("Error: Could not open memory_dump.txt for writing");
+            return;
+        end
+        
+        $display("Writing memory dump to file...");
+        for (i = 0; i < (2**ADR_W); i++) begin
+            $fwrite(file_handle, "%h %h\n", i, mem[i]);
+        end
+        
+        $fclose(file_handle);
+        $display("Memory dump completed: memory_dump.txt");
+    end
+endtask
+
 // ----------
 // RAM
 // ----------
+
+integer write_count = 0;
 
 always @(posedge i_clk) begin: ram
     
@@ -69,12 +92,25 @@ always @(posedge i_clk) begin: ram
                     mem[i_addr][i +: 8] <= i_indata[i +: 8];
                 end
             end
+            
+            // Count writes and auto-dump every 10 writes
+            write_count = write_count + 1;
+            if (write_count % 10 == 0) begin
+                $display("Auto-dumping memory after %0d writes...", write_count);
+                dump_mem();
+            end
 
         // Read
         end else begin
             o_outdata <= mem[i_addr];
         end
     end
+end
+
+// Final dump at end of simulation
+final begin
+    $display("Final memory dump at simulation end...");
+    dump_mem();
 end
 
 endmodule 

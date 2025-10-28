@@ -169,3 +169,6 @@ ${RTL_DIR}/src/sauria_core/systolic_array/pulp_fma/fpnew_fma.sv
 ${RTL_DIR}/src/sauria_core/sauria_logic.sv
 ${RTL_DIR}/src/sauria_core/sauria_core.sv
 ${RTL_DIR}/src/sauria_subsystem.sv
+${RTL_DIR}/src/sauria_core/quantization/quantization_wrapper.sv
+${RTL_DIR}/src/sauria_core/quantization/quantization.sv
+${RTL_DIR}/src/sauria_core/quantization/quantization_core.sv

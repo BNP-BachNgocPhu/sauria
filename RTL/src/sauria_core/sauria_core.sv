@@ -136,6 +136,20 @@ logic                               sramc_wren;
 logic [0:sauria_pkg::SRAMC_N-1]     sramc_wmask;
 logic [sauria_pkg::SRAMC_W-1:0]     sramc_wdata;
 
+// Quantization Wrapper intermediate signals (PSM → Quantization → SRAM)
+logic [sauria_pkg::ADRC_W-1:0]      psm_sramc_addr;     // PSM to Quantization
+logic                               psm_sramc_wren;     // PSM to Quantization
+logic                               psm_sramc_rden;     // PSM to Quantization   
+logic [0:sauria_pkg::SRAMC_N-1]     psm_sramc_wmask;    // PSM to Quantization
+logic [sauria_pkg::SRAMC_W-1:0]     psm_sramc_wdata;    // PSM to Quantization (raw data)
+
+
+logic [sauria_pkg::ADRC_W-1:0]      quant_sramc_addr;   // Quantization to SRAM
+logic                               quant_sramc_wren;   // Quantization to SRAM
+logic                               quant_sramc_rden;   // Quantization to SRAM
+logic [0:sauria_pkg::SRAMC_N-1]     quant_sramc_wmask;  // Quantization to SRAM  
+logic [sauria_pkg::SRAMC_W-1:0]     quant_sramc_wdata;  // Quantization to SRAM (quantized data)
+
 // Global SRAM signals
 logic [0:2]                         sram_select;
 logic                               sram_deepsleep;
@@ -196,16 +210,47 @@ sauria_logic #(
     .o_srama_rden       (srama_rden),
     .o_sramb_addr       (sramb_addr),
     .o_sramb_rden       (sramb_rden),
-    .o_sramc_addr       (sramc_addr),
-    .o_sramc_rden       (sramc_rden),
-    .o_sramc_wren       (sramc_wren),
-    .o_sramc_wmask      (sramc_wmask),
-    .o_sramc_wdata      (sramc_wdata),
+    .o_sramc_addr       (psm_sramc_addr),     // Output to PSM signals (before quantization)
+    .o_sramc_rden       (psm_sramc_rden),         // Read enable goes directly to SRAM
+    .o_sramc_wren       (psm_sramc_wren),     // Output to PSM signals (before quantization)
+    .o_sramc_wmask      (psm_sramc_wmask),    // Output to PSM signals (before quantization)
+    .o_sramc_wdata      (psm_sramc_wdata),    // Output to PSM signals (raw data before quantization)
     .o_sram_select      (sram_select),
     .o_sram_deepsleep   (sram_deepsleep),
     .o_sram_powergate   (sram_powergate),
     .o_doneintr         (o_doneintr)
 );
+
+// Quantization Wrapper - PSM → Quantization → SRAM data path
+quantization_wrapper #(
+    .SRAMC_W    (sauria_pkg::SRAMC_W),
+    .ADRC_W     (sauria_pkg::ADRC_W),
+    .SRAMC_N    (sauria_pkg::SRAMC_N)
+) quantize_wrapper_i (
+    .i_clk              (i_clk),
+    .i_rstn             (i_rstn),
+    
+    // Input from PSM (via sauria_logic)
+    .i_sramc_addr_q     (psm_sramc_addr),     // Address from PSM
+    .i_sramc_wren_q     (psm_sramc_wren),     // Write enable from PSM
+    .i_sramc_wmask_q    (psm_sramc_wmask),    // Write mask from PSM
+    .i_sramc_wdata_q    (psm_sramc_wdata),    // Raw data from PSM (to be quantized)
+    .i_sramc_rden_q     (psm_sramc_rden),     // Read enable to SRAM (directly from PSM) 
+
+    // Output to SRAM (via sram_top)
+    .o_sramc_addr_q     (quant_sramc_addr),   // Address to SRAM
+    .o_sramc_wren_q     (quant_sramc_wren),   // Write enable to SRAM  
+    .o_sramc_wmask_q    (quant_sramc_wmask),  // Write mask to SRAM
+    .o_sramc_wdata_q    (quant_sramc_wdata),  // Quantized data to SRAM
+    .o_sramc_rden_q     (quant_sramc_rden)    // Read enable to SRAM (directly from PSM)
+);
+
+// Final signal assignment: Use quantized signals for write operations, PSM for address/read
+assign sramc_addr  = quant_sramc_addr;    // Address comes from PSM (shared for read/write)
+assign sramc_wren  = quant_sramc_wren;    // Write enable from quantization wrapper  
+assign sramc_wmask = quant_sramc_wmask;   // Write mask from quantization wrapper
+assign sramc_wdata = quant_sramc_wdata;   // Quantized data from wrapper
+assign sramc_rden  = quant_sramc_rden;    // Read enable comes from PSM (shared for read/write)
 
 // AXI4 Interface to Data SRAMs
 axi_full_2ram #(

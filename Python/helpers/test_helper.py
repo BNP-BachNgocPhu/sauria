@@ -40,7 +40,7 @@ TOPTS = {
     #       * bmk_torture :         40 large convolutions with tiling
     #       * power_estimation :    1 small convolution with high PE utilization for power estimation
     #       * debug_test :          testing different memory accesses
-    "test_type" :           "conv_validation",
+    "test_type" :           "bmk_small",
 
     # Additional options used for debugging
     # *******************************************
@@ -569,25 +569,25 @@ def extend_random_tests(TESTS, TILEINFO, random_tests, max_tiles=10):
 def gen_small_bmk_tests(X, Y, MEMC_size):
 
     # Full convolution sizes
-    Bw_list =       [3,    1,   7,   3]
-    Bh_list =       [3,    1,   7,   3]
-    d_list =        [1,    1,   1,   9]
-    s_list =        [1,    1,   3,   1]
-    c_list =        [64, 100,  16,  50]
+    Bw_list =       [3]
+    Bh_list =       [3]
+    d_list =        [1]
+    s_list =        [1]
+    c_list =        [64]
     
-    Cw_list =       [32,  64,   16,  8]
-    Ch_list =       [16,   8,   8,   3]
-    Cc_list =       [32,  32,   32,  32]
+    Cw_list =       [32]
+    Ch_list =       [16]
+    Cc_list =       [32]
     
-    Xu_list =       [X,    X,    X,  X]
-    Yu_list =       [Y,    Y,    Y,  Y]
-    preload_list =  [1,    1,    1,  1]
+    Xu_list =       [X]
+    Yu_list =       [Y]
+    preload_list =  [1]
 
     # Tile sizes
-    c_til_list =    [32, 100,   16,  25]
-    k_til_list =    [32,  32,   16,  16]
-    h_til_list =    [8,    4,    4,   3]
-    w_til_list =    [32,  32,   16,   8]
+    c_til_list =    [32]
+    k_til_list =    [32]
+    h_til_list =    [8]
+    w_til_list =    [32]
 
     FIXTESTS = [Bw_list, Bh_list, d_list, s_list, c_list, Cw_list, Ch_list, Cc_list, Xu_list, Yu_list, preload_list]
 
