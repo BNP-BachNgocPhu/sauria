@@ -1,148 +1,65 @@
 ================================================================================
-                        QUANTIZATION MODULES - DOCUMENTATION
+                    QUANTIZATION MODULES - DOCUMENTATION
 ================================================================================
 
 Thư mục: RTL/src/sauria_core/quantization/
 Tác giả: BNP-BachNgocPhu
-Mục đích: Triển khai quantization 32-bit → 8-bit cho neural network inference
+Mục đích: Quantization 32-bit → 8-bit cho neural network inference
 
 ================================================================================
-                            TỔNG QUAN HỆ THỐNG
-================================================================================
-
-Quantization subsystem được thiết kế để chuyển đổi dữ liệu 32-bit signed 
-thành 8-bit unsigned trong quá trình inference của neural network, giúp:
-- Giảm băng thông memory
-- Tăng tốc độ xử lý 
-- Tiết kiệm năng lượng
-
-Hệ thống bao gồm 3 module chính với kiến trúc pipeline 6-clock:
-
-    [Accelerator] → [quantization_wrapper] → [quantization] → [SRAM]
-                                                    ↓
-                                            [quantization_core × 4]
-
-================================================================================
-                            CÁC MODULE CHI TIẾT
+                           CÁC MODULE CHính
 ================================================================================
 
 1. quantization_core.sv
-   ────────────────────────────────────────────────────────────────────────
-   VỊ TRÍ: Core computation engine (level thấp nhất)
-   VAI TRÒ: 
-   • Thực hiện quantization cho 1 lane 32-bit → 8-bit
-   • Pipeline 6-clock với 3 stage:
-     - Stage 1 (Clock 1-2): Multiplication & Bias
-     - Stage 2 (Clock 3-4): Shift & Zero Point  
-     - Stage 3 (Clock 5-6): Saturation & Output
-   • Sử dụng scale factor (M_Q32_32) và zero point (Z_DEF)
-   
-   THUẬT TOÁN:
-   output = saturate(((input × scale_factor) >> 32) + zero_point, 0, 255)
-   
-   PARAMETERS:
-   • M_Q32_32 = 64'sd256    : Scale factor (default)
-   • Z_DEF = 16'sd128       : Zero point (default)
+   • Core computation: 32-bit signed → 8-bit unsigned
+   • Pipeline 6-clock, throughput 1 sample/clock
+   • Algorithm: saturate(((input × scale) >> 32) + zero_point)
 
 2. quantization.sv  
-   ────────────────────────────────────────────────────────────────────────
-   VỊ TRÍ: Top-level quantization module
-   VAI TRÒ:
-   • Orchestrate 4-lane parallel quantization
-   • 128-bit input → 4×32-bit lanes → 4×8-bit → 128-bit packed output
-   • Address Management & Data (AMD) logic:
-     - Address adjustment: addr_out = addr_in >> 2
-     - Mask repositioning based on addr_in % 4
-     - Data packing với pattern replication
-   • 6-clock control signal synchronization
-   
-   MEMORY LAYOUT TRANSFORMATION:
-   Input:  [127:96][95:64][63:32][31:0]  (4×32-bit words)
-           Address: 0x100, 0x104, 0x108, 0x10C
-   
-   Output: [q3][q2][q1][q0] repeated 4 times (16×8-bit)
-           Address: 0x40 (= 0x100>>2)
-           Mask: Positioned theo addr%4
+   • 4-lane parallel processing (128-bit → 4×32-bit → 4×8-bit)
+   • Address adjustment: addr_out = addr_in >> 2
+   • Memory layout transformation và mask repositioning
 
 3. quantization_wrapper.sv
-   ────────────────────────────────────────────────────────────────────────
-   VỊ TRÍ: Interface adapter (level cao nhất)
-   VAI TRÒ:
-   • Cung cấp clean interface cho integration
-   • Pass-through wrapper cho quantization module
-   • Tách biệt implementation details khỏi top-level design
-   • Dễ dàng swap/modify quantization logic
+   • Interface adapter cho tích hợp vào sauria_core
+
 
 ================================================================================
-                        INTEGRATION VÀO SAURIA CORE
+                       TÍCH HỢP VÀO SAURIA_CORE
 ================================================================================
 
-Quantization modules được tích hợp vào data path như sau:
+PHƯƠNG PHÁP: Chèn quantization_wrapper giữa PSM và SRAM
 
-sauria_core.sv:
-├── Processing Units
-├── Memory Controller  
-├── quantization_wrapper ← **MODULE MỚI**
-│   └── quantization
-│       └── quantization_core[0:3]
-└── SRAM Interface
+TRƯỚC KHI TÍCH HỢP:
+sauria_logic (PSM) ──────────► sram_top (SRAM)
 
-SIGNAL FLOW:
-1. Accelerator outputs → quantization_wrapper input
-2. 128-bit data split → 4 parallel quantization_core
-3. 6-clock pipeline processing
-4. AMD logic adjusts address/mask/data
-5. Quantized output → SRAM controller
+SAU KHI TÍCH HỢP:
+sauria_logic (PSM) ──► quantization_wrapper ──► sram_top (SRAM)
 
-================================================================================
-                            THAM SỐ HIỆU NĂNG
-================================================================================
-
-• THROUGHPUT: 4×32-bit values per clock (sau pipeline fill)
-• LATENCY: 6 clock cycles
-• AREA: 4× quantization_core + control logic
-• FREQUENCY: Phụ thuộc vào clock domain của sauria_core
-
-MEMORY BANDWIDTH REDUCTION:
-• Input: 128-bit per access  
-• Output: 32-bit effective (4×8-bit packed)
-• Compression ratio: 4:1
+IMPLEMENTATION TRONG sauria_core.sv:
+• Tạo intermediate signals:
+  - psm_sramc_* : PSM output signals  
+  - quant_sramc_* : Quantized output signals
+• Instantiate quantization_wrapper:
+  - Input: psm_sramc_* (raw data từ PSM)
+  - Output: quant_sramc_* (quantized data đến SRAM)
+• Final assignment: 
+  - sramc_addr = quant_sramc_addr
+  - sramc_wdata = quant_sramc_wdata (quantized)
+  - sramc_wren = quant_sramc_wren
 
 ================================================================================
-                        TESTING VÀ VERIFICATION
+                            TESTING & DEBUG
 ================================================================================
 
-Test cases nên cover:
-1. Functional correctness của quantization algorithm
-2. Pipeline timing và throughput
-3. Address/mask transformation logic  
-4. Boundary conditions (overflow, underflow)
-5. Integration với existing sauria_core datapath
+MEMORY DEBUGGING:
+• File: RTL/src/sauria_core/sram/ram_inferred_for_test.sv
+• Chức năng: Auto-dump memory mỗi 10 writes → memory_dump.txt
+• Quan sát: Dữ liệu quantized được ghi vào memory
 
-SIMULATION:
-• Testbench: tb_sauria_subsystem.sv (existing)
-• Stimuli: Python scripts trong Python/helpers/
-• Verification: Compare với golden model
+HIỆU NĂNG:
+• Throughput: 4×32-bit/clock • Latency: 6 clocks • Compression: 4:1
 
 ================================================================================
-                            FUTURE ENHANCEMENTS
-================================================================================
-
-1. Configurable quantization parameters per layer
-2. Dynamic range adjustment
-3. Support cho symmetric/asymmetric quantization
-4. Batch normalization fusion
-5. Multi-precision support (4-bit, 16-bit)
-
-================================================================================
-                                NOTES
-================================================================================
-
-• Module được thiết kế tương thích với existing SRAM interface
-• Sử dụng SystemVerilog synthesizable constructs
-• Pipeline design cho high-frequency operation
-• Modular architecture cho easy modification/extension
-
-Liên hệ: BNP-BachNgocPhu
 Repository: https://github.com/BNP-BachNgocPhu/sauria
 ================================================================================
