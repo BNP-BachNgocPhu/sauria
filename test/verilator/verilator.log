@@ -1,0 +1,1459 @@
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_pkg.sv:23:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   23 | package axi_pkg;
+      |         ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=4.224
+                       ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_pkg.sv:20:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | package sauria_pkg;
+      |         ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/ecc_pkg.sv:15:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | package ecc_pkg;
+      |         ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cf_math_pkg.sv:18:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | package cf_math_pkg;
+      |         ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/fpnew/src/fpnew_pkg.sv:14:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | package fpnew_pkg;
+      |         ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/fpnew/src/fpnew_classifier.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module fpnew_classifier #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/fpnew/src/fpnew_rounding.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module fpnew_rounding #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/binary_to_gray.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module binary_to_gray #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/deprecated/fifo_v2.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module fifo_v2 #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/id_queue.sv:48:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   48 | module id_queue #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/fall_through_register.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module fall_through_register #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/sync_wedge.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module sync_wedge #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/edge_propagator.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module edge_propagator (
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_to_mem.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module stream_to_mem #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/edge_propagator_rx.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module edge_propagator_rx (
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/max_counter.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module max_counter #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/lfsr_8bit.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module lfsr_8bit #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/lfsr.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module lfsr #(
+      |        ^~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/ecc_decode.sv:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   29 | module ecc_decode import ecc_pkg::*; #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_fork.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module stream_fork #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module lzc #(
+      |        ^~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_filter.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module stream_filter (
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/fifo_v3.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module fifo_v3 #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/popcount.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module popcount #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/edge_propagator_tx.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module edge_propagator_tx (
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/edge_detect.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module edge_detect (
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_fifo.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module stream_fifo #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_join.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module stream_join #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_arbiter_flushable.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module stream_arbiter_flushable #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_arbiter.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module stream_arbiter #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/sync.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module sync #(
+      |        ^~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/lfsr_16bit.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module lfsr_16bit #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/delta_counter.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module delta_counter #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/mv_filter.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module mv_filter #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/plru_tree.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module plru_tree #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/addr_decode.sv:35:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   35 | module addr_decode #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_fifo_gray.sv:102:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  102 | module cdc_fifo_gray #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_fifo_gray.sv:172:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  172 | module cdc_fifo_gray_src #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_fifo_gray.sv:230:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  230 | module cdc_fifo_gray_dst #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_demux.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module stream_demux #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/isochronous_spill_register.sv:40:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   40 | module isochronous_spill_register #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/exp_backoff.sv:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   23 | module exp_backoff #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_xbar.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module stream_xbar #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/rstgen_bypass.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module rstgen_bypass #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/onehot_to_bin.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module onehot_to_bin #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_fork_dynamic.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module stream_fork_dynamic #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_mux.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module stream_mux #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/gray_to_binary.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module gray_to_binary #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/sub_per_hash.sv:39:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   39 | module sub_per_hash #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_register.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module stream_register #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:47:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   47 | module rr_arb_tree #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_2phase.sv:43:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   43 | module cdc_2phase #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_2phase.sv:92:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   92 | module cdc_2phase_src #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_2phase.sv:142:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  142 | module cdc_2phase_dst #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/counter.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module counter #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/spill_register_flushable.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module spill_register_flushable #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/spill_register.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module spill_register #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/serial_deglitch.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module serial_deglitch #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_delay.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module stream_delay #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/stream_omega_net.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module stream_omega_net #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/rstgen.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module rstgen (
+      |        ^~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/unread.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module unread (
+      |        ^~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/shift_reg.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module shift_reg #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/common_cells/src/cdc_fifo_2phase.sv:45:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   45 | module cdc_fifo_2phase #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_serializer.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module axi_serializer #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_serializer.sv:223:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  223 | module axi_serializer_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_err_slv.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module axi_err_slv #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_demux.sv:42:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   42 | module axi_demux #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_demux.sv:216:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  216 | module axi_demux_intf #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:43:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   43 | module axi_demux_simple #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:513:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  513 | module axi_demux_id_counters #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cut.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module axi_cut #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cut.sv:119:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  119 | module axi_cut_intf #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cut.sv:199:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  199 | module axi_lite_cut_intf #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_join.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module axi_lite_join_intf (
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_xbar.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module axi_xbar
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_xbar.sv:341:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  341 | module axi_xbar_intf
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_demux.sv:27:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   27 | module axi_lite_demux #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_demux.sv:483:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  483 | module axi_lite_demux_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_mailbox.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module axi_lite_mailbox #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_mailbox.sv:204:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  204 | module axi_lite_mailbox_slave #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_mailbox.sv:558:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  558 | module axi_lite_mailbox_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module axi_mux #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:500:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  500 | module axi_mux_intf #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_atop_filter.sv:37:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   37 | module axi_atop_filter #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_atop_filter.sv:375:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  375 | module axi_atop_filter_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_join.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module axi_join_intf (
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_isolate.sv:40:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   40 | module axi_isolate #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_isolate.sv:163:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  163 | module axi_isolate_inner #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_isolate.sv:414:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  414 | module axi_isolate_intf #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc_dst.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module axi_cdc_dst #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc_dst.sv:160:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  160 | module axi_cdc_dst_intf #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc_dst.sv:232:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  232 | module axi_lite_cdc_dst_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_iw_converter.sv:44:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   44 | module axi_iw_converter #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_iw_converter.sv:263:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  263 | module axi_iw_converter_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_id_prepend.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module axi_id_prepend #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_delayer.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module axi_delayer #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_delayer.sv:127:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  127 | module axi_delayer_intf #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_dw_converter.sv:62:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   62 | module axi_lite_dw_converter #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_dw_converter.sv:490:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  490 | module axi_lite_dw_converter_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module axi_cdc #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc.sv:130:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  130 | module axi_cdc_intf #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc.sv:195:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  195 | module axi_lite_cdc_intf #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_to_axi.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module axi_lite_to_axi #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_to_axi.sv:97:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   97 | module axi_lite_to_axi_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc_src.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module axi_cdc_src #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc_src.sv:159:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  159 | module axi_cdc_src_intf #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_cdc_src.sv:231:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  231 | module axi_lite_cdc_src_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_modify_address.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module axi_modify_address #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_modify_address.sv:89:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   89 | module axi_modify_address_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_multicut.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module axi_multicut #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_multicut.sv:96:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   96 | module axi_multicut_intf #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_multicut.sv:171:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  171 | module axi_lite_multicut_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_regs.sv:60:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   60 | module axi_lite_regs #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_regs.sv:413:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  413 | module axi_lite_regs_intf #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_to_axi_lite.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module axi_to_axi_lite #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_to_axi_lite.sv:118:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  118 | module axi_to_axi_lite_id_reflect #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_to_axi_lite.sv:250:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  250 | module axi_to_axi_lite_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_burst_splitter.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module axi_burst_splitter #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_burst_splitter.sv:349:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  349 | module axi_burst_splitter_ax_chan #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_burst_splitter.sv:466:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  466 | module axi_burst_splitter_counters #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_xbar.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module axi_lite_xbar #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_xbar.sv:242:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  242 | module axi_lite_xbar_intf #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_mux.sv:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   23 | module axi_lite_mux #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_mux.sv:457:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  457 | module axi_lite_mux_intf #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_id_remap.sv:32:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   32 | module axi_id_remap #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_id_remap.sv:422:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  422 | module axi_id_remap_table #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_id_remap.sv:583:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  583 | module axi_id_remap_intf #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_id_serialize.sv:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   29 | module axi_id_serialize #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_id_serialize.sv:370:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  370 | module axi_id_serialize_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_to_apb.sv:50:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   50 | module axi_lite_to_apb #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/pulp_platform/axi/src/axi_lite_to_apb.sv:383:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  383 | module axi_lite_to_apb_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_addr_pkg.sv:20:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | package sauria_addr_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:22:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | package df_ctrl_pkg;
+      |         ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/interfaces.sv:88:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   88 | module unpacked_to_AXI_LITE (
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/interfaces.sv:133:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  133 | module AXI4Lite_to_unpacked (
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/interfaces.sv:178:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  178 | module AXI_LITE_assign (
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/interfaces.sv:205:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  205 | module AXI_LITE_to_AXI4Lite (
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/interfaces.sv:232:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  232 | module AXI4Lite_to_AXI_LITE (
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/acc_ready_queue.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module acc_ready_queue #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/df_controller_top.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module df_controller_top #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/sauria_dma_controller.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module sauria_dma_controller (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/sauria_dma_pointer_generator.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module sauria_dma_pointer_generator (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/df_controller/sauria_interface.sv:22:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   22 | module sauria_interface #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/dma_top.sv:32:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   32 | module dma_top #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/r_engine.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module r_engine(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/aw_engine.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module aw_engine #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/transaction_generator.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module transaction_generator #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/ar_engine.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module ar_engine #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/realigner.sv:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   25 | module realigner #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/data_fifo.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module data_fifo #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/b_engine.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module b_engine #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/conf_regs.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module conf_regs #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/redma_top.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module redma_top #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/dma/redma/src/w_engine.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module w_engine #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/axi/axi_lite_2ram.sv:66:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   66 | module axi_lite_2ram #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/axi/axi_full_2ram.sv:36:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   36 | module axi_full_2ram #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/axi/axi_mem_slave.sv:36:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   36 | module axi_mem_slave #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/axi/axi_lite_err_slv_intf.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module axi_lite_err_slv_intf #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/common/cdc_sync_reg.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module cdc_sync_reg #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/common/cnt_dualctx.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module cnt_dualctx #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/common/fifo_memory_ff.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module fifo_memory_ff #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/common/cnt_generic.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module cnt_generic #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/config/config_regs.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module config_regs #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/control/context_switch_controller.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module context_switch_controller #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/control/context_fsm.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module context_fsm (
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/control/feeders_fsm.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module feeders_fsm #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/control/main_controller.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module main_controller #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/feed_data_manager.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module feed_data_manager #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/feed_xy_lane.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module feed_xy_lane #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/wei_feeder.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module wei_feeder #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/feed_registers.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module feed_registers #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/ifmap_feeder.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module ifmap_feeder #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/wei_idxcnt.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module wei_idxcnt #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/data_feeder/ifmap_idxcnt.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module ifmap_idxcnt #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/psm/psm_wdata_manager.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module psm_wdata_manager #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/psm/psm_idxcnt.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module psm_idxcnt #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/psm/psm_rdata_manager.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module psm_rdata_manager #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/psm/psm_shift_register.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module psm_shift_register #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/psm/psm_shift_fsm.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module psm_shift_fsm #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/psm/psm_top.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module psm_top #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/sram/sram_top.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module sram_top #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/sram/ram_inferred.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module ram_inferred #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/sram/ram_intf_wrapper.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module ram_intf_wrapper #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/sa_array.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module sa_array #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/zero_det_neg.sv:33:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   33 | module zero_det_neg #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/sa_processing_element.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module sa_processing_element #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_truah.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module adder_truah #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_trua.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module adder_trua #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_gear.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module adder_gear #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_ideal.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module adder_ideal #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_generic.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module adder_generic #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_gear_2c.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module adder_gear_2c #(
+      |        ^~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/adder/adder_loa.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module adder_loa #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/multiplier_booth.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module multiplier_booth #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/wallace_8.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module wallace_8 #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/multiplier_bam.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module multiplier_bam #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/multiplier_ideal.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module multiplier_ideal #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/multiplier_log.sv:31:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   31 | module multiplier_log #(
+      |        ^~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/lopd.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module lopd #(
+      |        ^~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/wallace_4.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module wallace_4 #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/multiplier_wallace.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module multiplier_wallace #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/wallace_16.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module wallace_16 #(
+      |        ^~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/mul_2x2.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module mul_2x2 #(
+      |        ^~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/bam_cell.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module bam_cell #(
+      |        ^~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/multiplier/multiplier_generic.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module multiplier_generic #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/pulp_fma/fma_wrapper.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module fma_wrapper #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/systolic_array/pulp_fma/fpnew_fma.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module fpnew_fma #(
+      |        ^~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/sauria_logic.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module sauria_logic #(
+      |        ^~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/sauria_core.sv:32:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   32 | module sauria_core #(
+      |        ^~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_subsystem.sv:32:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   32 | module sauria_subsystem #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization_wrapper.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module quantization_wrapper #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/bnp/sauria/RTL/src/sauria_core/quantization/quantization.sv:16:8: ... Location of module with timescale
+   16 | module quantization #(
+      |        ^~~~~~~~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:63:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   63 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:24:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   24 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:30:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   30 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:36:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   36 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:79:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   79 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:73:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   73 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:41:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   41 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:49:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   49 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNPACKED: /home/bnp/sauria/RTL/src/df_controller/df_controller_pkg.sv:57:13: Unsupported: Unpacked struct/union
+                                                                                    : ... In instance sauria_tester
+   57 |     typedef struct {
+      |             ^~~~~~
+%Warning-UNOPTFLAT: /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:65:41: Signal unoptimizable: Feedback to clock or circular logic: 'sauria_tester.dut.dma_top_i.axi_demux_i.__Vcellout__i_demux_simple__mst_reqs_o'
+   65 |   output axi_req_t    [NoMstPorts-1:0]  mst_reqs_o,
+      |                                         ^~~~~~~~~~
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:65:41:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.__Vcellout__i_demux_simple__mst_reqs_o
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:559:32:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:553:33:      Example path: sauria_tester.dut.core_mem_mux_i.slv_reqs
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:253:10:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:163:36:      Example path: sauria_tester.dut.core_mem_mux_i.i_axi_mux.gen_mux.slv_ar_valids
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:159:27:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:140:33:      Example path: sauria_tester.dut.core_mem_mux_i.i_axi_mux.gen_mux.i_ar_arbiter.gen_arbiter.req_d
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:273:24:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:261:15:      Example path: sauria_tester.dut.core_mem_mux_i.i_axi_mux.gen_mux.i_ar_arbiter.gen_arbiter.gen_levels[0].gen_level[0].sel
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:277:38:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:163:51:      Example path: sauria_tester.dut.core_mem_mux_i.i_axi_mux.gen_mux.slv_ar_readies
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:239:10:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_mux.sv:62:38:      Example path: sauria_tester.dut.core_mem_mux_i.__Vcellout__i_axi_mux__slv_resps_o
+                    /home/bnp/sauria/RTL/src/dma/dma_top.sv:93:35:      Example path: ASSIGNW
+                    /home/bnp/sauria/RTL/src/dma/dma_top.sv:90:15:      Example path: sauria_tester.dut.dma_top_i.sauria_axi_resp
+                    /home/bnp/sauria/RTL/src/dma/dma_top.sv:299:6:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux.sv:75:41:      Example path: sauria_tester.dut.dma_top_i.__Vcellinp__axi_demux_i__mst_resps_i
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:455:36:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:105:31:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.i_demux_simple.genblk1.mst_b_valids
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:159:27:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:140:33:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.i_demux_simple.genblk1.i_b_mux.gen_arbiter.req_d
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:273:24:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:261:15:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.i_demux_simple.genblk1.i_b_mux.gen_arbiter.gen_levels[0].gen_level[0].sel
+                    /home/bnp/sauria/pulp_platform/common_cells/src/rr_arb_tree.sv:277:38:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:105:51:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.i_demux_simple.genblk1.mst_b_readies
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:415:5:      Example path: ALWAYS
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:65:41:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.__Vcellout__i_demux_simple__mst_reqs_o
+%Warning-UNOPTFLAT: /home/bnp/sauria/RTL/src/axi/axi_full_2ram.sv:90:9: Signal unoptimizable: Feedback to clock or circular logic: 'sauria_tester.i_sim_mem_0.axi_full_if.axi_resp_d'
+   90 | resp_t  axi_resp_d, axi_resp_q /*verilator split_var*/ ;
+      |         ^~~~~~~~~~
+                    /home/bnp/sauria/RTL/src/axi/axi_full_2ram.sv:90:9:      Example path: sauria_tester.i_sim_mem_0.axi_full_if.axi_resp_d
+                    /home/bnp/sauria/RTL/src/axi/axi_full_2ram.sv:285:1:      Example path: ALWAYS
+                    /home/bnp/sauria/RTL/src/axi/axi_full_2ram.sv:90:9:      Example path: sauria_tester.i_sim_mem_0.axi_full_if.axi_resp_d
+%Warning-UNOPTFLAT: /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:52:45: Signal unoptimizable: Feedback to clock or circular logic: 'sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i.genblk1.fma_i.fma_i.i_lzc.gen_lzc.index_nodes'
+                                                                                : ... In instance sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i
+   52 |     logic [2**NumLevels-1:0][NumLevels-1:0] index_nodes;
+      |                                             ^~~~~~~~~~~
+                    /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:52:45:      Example path: sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i.genblk1.fma_i.fma_i.i_lzc.gen_lzc.index_nodes
+                    /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:92:50:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:52:45:      Example path: sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i.genblk1.fma_i.fma_i.i_lzc.gen_lzc.index_nodes
+%Warning-UNOPTFLAT: /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:51:30: Signal unoptimizable: Feedback to clock or circular logic: 'sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i.genblk1.fma_i.fma_i.i_lzc.gen_lzc.sel_nodes'
+                                                                                : ... In instance sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i
+   51 |     logic [2**NumLevels-1:0] sel_nodes;
+      |                              ^~~~~~~~~
+                    /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:51:30:      Example path: sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i.genblk1.fma_i.fma_i.i_lzc.gen_lzc.sel_nodes
+                    /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:90:48:      Example path: ASSIGNW
+                    /home/bnp/sauria/pulp_platform/common_cells/src/lzc.sv:51:30:      Example path: sauria_tester.dut.sauria_core_i.sauria_logic_top_i.sa_array_i.y_axis[0].x_axis[0].sa_processing_element_i.genblk1.fma_i.fma_i.i_lzc.gen_lzc.sel_nodes
+%Warning-UNOPTFLAT: /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:63:41: Signal unoptimizable: Feedback to clock or circular logic: 'sauria_tester.dut.dma_top_i.axi_demux_i.__Vcellout__i_demux_simple__slv_resp_o'
+   63 |   output axi_resp_t                     slv_resp_o,
+      |                                         ^~~~~~~~~~
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:63:41:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.__Vcellout__i_demux_simple__slv_resp_o
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:284:5:      Example path: ALWAYS
+                    /home/bnp/sauria/pulp_platform/axi/src/axi_demux_simple.sv:63:41:      Example path: sauria_tester.dut.dma_top_i.axi_demux_i.__Vcellout__i_demux_simple__slv_resp_o
+make[1]: Entering directory '/home/bnp/sauria/test/verilator/obj_dir'
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o veri_top.o ../veri_top.cc
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o verilated.o /home/bnp/sauria/tools/verilator/include/verilated.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o verilated_save.o /home/bnp/sauria/tools/verilator/include/verilated_save.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o verilated_vcd_c.o /home/bnp/sauria/tools/verilator/include/verilated_vcd_c.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester.o Vsauria_tester.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester___024root__DepSet_h6fe80071__0.o Vsauria_tester___024root__DepSet_h6fe80071__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester___024root__DepSet_h6fe80071__1.o Vsauria_tester___024root__DepSet_h6fe80071__1.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester___024root__DepSet_h6fe80071__2.o Vsauria_tester___024root__DepSet_h6fe80071__2.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester___024root__DepSet_h0217780e__0.o Vsauria_tester___024root__DepSet_h0217780e__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester___024root__DepSet_h0217780e__1.o Vsauria_tester___024root__DepSet_h0217780e__1.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester___024root__DepSet_h0217780e__2.o Vsauria_tester___024root__DepSet_h0217780e__2.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_axi_lite_mux__pi15__DepSet_h51020c46__0.o Vsauria_tester_axi_lite_mux__pi15__DepSet_h51020c46__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__0.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__1.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__1.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__0.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__1.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__1.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__2.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__2.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__3.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__3.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__0.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__1.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__1.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__2.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__2.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__3.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__3.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__4.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__4.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__5.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__5.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__6.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__6.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__7.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__7.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__8.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__8.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__9.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__9.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_h5a6e197c__0.o Vsauria_tester_sa_processing_element__pi48__DepSet_h5a6e197c__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__0.o Vsauria_tester__Trace__0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__1.o Vsauria_tester__Trace__1.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__2.o Vsauria_tester__Trace__2.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__3.o Vsauria_tester__Trace__3.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__4.o Vsauria_tester__Trace__4.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__5.o Vsauria_tester__Trace__5.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__6.o Vsauria_tester__Trace__6.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__7.o Vsauria_tester__Trace__7.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__8.o Vsauria_tester__Trace__8.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17 -Os -c -o Vsauria_tester__Trace__9.o Vsauria_tester__Trace__9.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__ConstPool_0.o Vsauria_tester__ConstPool_0.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester___024root__Slow.o Vsauria_tester___024root__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester___024root__DepSet_h6fe80071__0__Slow.o Vsauria_tester___024root__DepSet_h6fe80071__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester___024root__DepSet_h6fe80071__1__Slow.o Vsauria_tester___024root__DepSet_h6fe80071__1__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester___024root__DepSet_h6fe80071__2__Slow.o Vsauria_tester___024root__DepSet_h6fe80071__2__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester___024root__DepSet_h0217780e__0__Slow.o Vsauria_tester___024root__DepSet_h0217780e__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_AXI_BUS__A20_AB80_AC4__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_AXI_BUS__A20_AB80_AC4__DepSet_h356371ab__0__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4__DepSet_h356371ab__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_AXI_BUS__A20_AB80_AC4_AD1__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4_AD1__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_AXI_BUS__A20_AB80_AC4_AD1__DepSet_h7db17f98__0__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4_AD1__DepSet_h7db17f98__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_axi_lite_mux__pi15__Slow.o Vsauria_tester_axi_lite_mux__pi15__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_axi_lite_mux__pi15__DepSet_h51020c46__0__Slow.o Vsauria_tester_axi_lite_mux__pi15__DepSet_h51020c46__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_axi_lite_mux__pi15__DepSet_hdf417c17__0__Slow.o Vsauria_tester_axi_lite_mux__pi15__DepSet_hdf417c17__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_AXI4Lite__W20_A20__Slow.o Vsauria_tester_AXI4Lite__W20_A20__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_AXI4Lite__W20_A20__DepSet_hcc7352d6__0__Slow.o Vsauria_tester_AXI4Lite__W20_A20__DepSet_hcc7352d6__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_FIFO_READ__D80__Slow.o Vsauria_tester_FIFO_READ__D80__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_FIFO_READ__D80__DepSet_h65e3ed38__0__Slow.o Vsauria_tester_FIFO_READ__D80__DepSet_h65e3ed38__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_FIFO_WRITE__D80__Slow.o Vsauria_tester_FIFO_WRITE__D80__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_FIFO_WRITE__D80__DepSet_hab1cafac__0__Slow.o Vsauria_tester_FIFO_WRITE__D80__DepSet_hab1cafac__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__F5_W3__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__0__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__1__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__1__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_h4016db94__0__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_h4016db94__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__pi45__Slow.o Vsauria_tester_feed_xy_lane__pi45__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__0__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__1__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__1__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__2__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__2__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__3__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__3__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_feed_xy_lane__pi45__DepSet_h0a8cd262__0__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h0a8cd262__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_sa_processing_element__pi48__Slow.o Vsauria_tester_sa_processing_element__pi48__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__0__Slow.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester_sa_processing_element__pi48__DepSet_h5a6e197c__0__Slow.o Vsauria_tester_sa_processing_element__pi48__DepSet_h5a6e197c__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Syms.o Vsauria_tester__Syms.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__0__Slow.o Vsauria_tester__Trace__0__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__1__Slow.o Vsauria_tester__Trace__1__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__2__Slow.o Vsauria_tester__Trace__2__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__3__Slow.o Vsauria_tester__Trace__3__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__4__Slow.o Vsauria_tester__Trace__4__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__5__Slow.o Vsauria_tester__Trace__5__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__6__Slow.o Vsauria_tester__Trace__6__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__7__Slow.o Vsauria_tester__Trace__7__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__8__Slow.o Vsauria_tester__Trace__8__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__9__Slow.o Vsauria_tester__Trace__9__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__10__Slow.o Vsauria_tester__Trace__10__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__11__Slow.o Vsauria_tester__Trace__11__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__12__Slow.o Vsauria_tester__Trace__12__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__13__Slow.o Vsauria_tester__Trace__13__Slow.cpp
+g++  -I.  -MMD -I/home/bnp/sauria/tools/verilator/include -I/home/bnp/sauria/tools/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -std=c++11 -DEXACT -O2  -std=gnu++17  -c -o Vsauria_tester__Trace__14__Slow.o Vsauria_tester__Trace__14__Slow.cpp
+echo "" > Vsauria_tester__ALL.verilator_deplist.tmp
+Archive ar -rcs Vsauria_tester__ALL.a Vsauria_tester.o Vsauria_tester___024root__DepSet_h6fe80071__0.o Vsauria_tester___024root__DepSet_h6fe80071__1.o Vsauria_tester___024root__DepSet_h6fe80071__2.o Vsauria_tester___024root__DepSet_h0217780e__0.o Vsauria_tester___024root__DepSet_h0217780e__1.o Vsauria_tester___024root__DepSet_h0217780e__2.o Vsauria_tester_axi_lite_mux__pi15__DepSet_h51020c46__0.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__0.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__1.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__0.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__1.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__2.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__3.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__0.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__1.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__2.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__3.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__4.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__5.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__6.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__7.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__8.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__9.o Vsauria_tester_sa_processing_element__pi48__DepSet_h5a6e197c__0.o Vsauria_tester__Trace__0.o Vsauria_tester__Trace__1.o Vsauria_tester__Trace__2.o Vsauria_tester__Trace__3.o Vsauria_tester__Trace__4.o Vsauria_tester__Trace__5.o Vsauria_tester__Trace__6.o Vsauria_tester__Trace__7.o Vsauria_tester__Trace__8.o Vsauria_tester__Trace__9.o Vsauria_tester__ConstPool_0.o Vsauria_tester___024root__Slow.o Vsauria_tester___024root__DepSet_h6fe80071__0__Slow.o Vsauria_tester___024root__DepSet_h6fe80071__1__Slow.o Vsauria_tester___024root__DepSet_h6fe80071__2__Slow.o Vsauria_tester___024root__DepSet_h0217780e__0__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4__DepSet_h356371ab__0__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4_AD1__Slow.o Vsauria_tester_AXI_BUS__A20_AB80_AC4_AD1__DepSet_h7db17f98__0__Slow.o Vsauria_tester_axi_lite_mux__pi15__Slow.o Vsauria_tester_axi_lite_mux__pi15__DepSet_h51020c46__0__Slow.o Vsauria_tester_axi_lite_mux__pi15__DepSet_hdf417c17__0__Slow.o Vsauria_tester_AXI4Lite__W20_A20__Slow.o Vsauria_tester_AXI4Lite__W20_A20__DepSet_hcc7352d6__0__Slow.o Vsauria_tester_FIFO_READ__D80__Slow.o Vsauria_tester_FIFO_READ__D80__DepSet_h65e3ed38__0__Slow.o Vsauria_tester_FIFO_WRITE__D80__Slow.o Vsauria_tester_FIFO_WRITE__D80__DepSet_hab1cafac__0__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__0__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_hb1efedfb__1__Slow.o Vsauria_tester_feed_xy_lane__F5_W3__DepSet_h4016db94__0__Slow.o Vsauria_tester_feed_xy_lane__pi45__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__0__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__1__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__2__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h6675e68d__3__Slow.o Vsauria_tester_feed_xy_lane__pi45__DepSet_h0a8cd262__0__Slow.o Vsauria_tester_sa_processing_element__pi48__Slow.o Vsauria_tester_sa_processing_element__pi48__DepSet_hd656afe3__0__Slow.o Vsauria_tester_sa_processing_element__pi48__DepSet_h5a6e197c__0__Slow.o Vsauria_tester__Syms.o Vsauria_tester__Trace__0__Slow.o Vsauria_tester__Trace__1__Slow.o Vsauria_tester__Trace__2__Slow.o Vsauria_tester__Trace__3__Slow.o Vsauria_tester__Trace__4__Slow.o Vsauria_tester__Trace__5__Slow.o Vsauria_tester__Trace__6__Slow.o Vsauria_tester__Trace__7__Slow.o Vsauria_tester__Trace__8__Slow.o Vsauria_tester__Trace__9__Slow.o Vsauria_tester__Trace__10__Slow.o Vsauria_tester__Trace__11__Slow.o Vsauria_tester__Trace__12__Slow.o Vsauria_tester__Trace__13__Slow.o Vsauria_tester__Trace__14__Slow.o
+g++    veri_top.o verilated.o verilated_save.o verilated_vcd_c.o Vsauria_tester__ALL.a      -o Test-Sim
+rm Vsauria_tester__ALL.verilator_deplist.tmp
+make[1]: Leaving directory '/home/bnp/sauria/test/verilator/obj_dir'

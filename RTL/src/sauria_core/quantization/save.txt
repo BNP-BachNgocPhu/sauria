@@ -1,0 +1,540 @@
+`timescale 1ns/1ps
+
+module quantization_core #(
+    parameter int PIPELINE_STAGES = 3,  // 3 stage pipeline
+    //parameter signed [63:0] M_Q32_32 = 64'sd1825361,
+    //parameter signed [15:0] Z_DEF = 16'sd0
+    parameter logic [63:0] M_Q32_32 = 64'sd256,
+    parameter logic [15:0] Z_DEF    = 16'sd128
+)(
+    input  logic        clk,
+    input  logic        rstn,
+    input  logic [31:0] in_i,   // input int32
+    output logic [7:0]  q_o     // quantized uint8
+);
+
+    // --------------- Combinational core ---------------
+    logic signed [95:0] mult, mult_biased;
+    logic signed [95:0] BIAS_MAG = 96'sd1 << 31;
+    logic signed [95:0] shifted;
+    logic signed [31:0] scaled, q32;
+    logic [7:0]         q_core;
+
+    always_comb begin
+        mult        = $signed(in_i) * $signed(M_Q32_32);
+        mult_biased = (mult[95] >= 1'b0) ? (mult + BIAS_MAG) : (mult - BIAS_MAG);
+        shifted     = mult_biased >>> 32;
+        scaled      = shifted[31:0];
+        q32         = scaled + {{16{Z_DEF[15]}}, Z_DEF};
+        if (q32 < 0)
+            q_core = 8'd0;
+        else if (q32 > 32'sd255)
+            q_core = 8'd255;
+        else
+            q_core = q32[7:0];
+    end
+
+    // --- Pipeline 3 stage, mỗi stage chèn thêm 1 register đệm (tổng 6 clk) ---
+    // Stage 1: mult+bias
+    logic signed [95:0] mult_biased_s1, mult_biased_s1r;
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            //mult_biased_s1 <= '0;
+            mult_biased_s1r <= '0;
+        end else begin
+            //mult_biased_s1 <= mult_biased;
+            mult_biased_s1r <= mult_biased;
+        end
+    end
+
+    // Stage 2: shift + addZ (with rounding to nearest)
+    logic signed [31:0] q32_s2, q32_s2r;
+    logic signed [95:0] shifted_s2;
+    logic signed [31:0] scaled_s2;
+    
+    always_comb begin
+        shifted_s2 = mult_biased_s1r >>> 32;
+        scaled_s2  = shifted_s2[31:0];
+    end
+    
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            q32_s2 <= '0;
+            q32_s2r <= '0;
+        end else begin
+            q32_s2  <= scaled_s2 + {{16{Z_DEF[15]}}, Z_DEF};
+            q32_s2r <= q32_s2;
+        end
+    end
+
+    // Stage 3: saturate
+    logic [7:0] q_o_d, q_o_dr;
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            q_o_d <= 8'd0;
+            q_o_dr <= 8'd0;
+        end else begin
+            if (q32_s2r < 0)
+                q_o_d <= 8'd0;
+            else if (q32_s2r > 32'sd255)
+                q_o_d <= 8'd255;
+            else
+                q_o_d <= q32_s2r[7:0];
+            q_o_dr <= q_o_d;
+        end
+    end
+
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn)
+            q_o <= 8'd0;
+        else
+            q_o <= q_o_dr;
+    end
+endmodule
+=======================
+`timescale 1ns/1ps
+
+module quantization_core #(
+    parameter int PIPELINE_STAGES = 3,  // 3 stage pipeline
+    parameter logic CLOCK_DIVIDER_EN = 1'b1,  // 0: 1clk per stage, 1: 2clk per stage
+    parameter logic [63:0] M_Q32_32 = 64'sd256,
+    parameter logic [15:0] Z_DEF    = 16'sd128
+)(
+    input  logic        clk,
+    input  logic        rstn,
+    input  logic [31:0] in_i,   // input int32
+    output logic [7:0]  q_o     // quantized uint8
+);
+
+    // Clock enable generation cho mỗi 2 clock
+    logic clk_enable;
+    logic clk_counter;
+    
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            clk_counter <= 1'b0;
+        end else begin
+            clk_counter <= ~clk_counter;  // Toggle mỗi clock
+        end
+    end
+    
+    // Clock enable: 1 nếu CLOCK_DIVIDER_EN = 0, mỗi 2 clk nếu CLOCK_DIVIDER_EN = 1
+    assign clk_enable = CLOCK_DIVIDER_EN ? clk_counter : 1'b1;
+
+    // --------------- Combinational core ---------------
+    logic signed [95:0] mult, mult_biased;
+    logic signed [95:0] BIAS_MAG = 96'sd1 << 31;
+    logic signed [95:0] shifted;
+    logic signed [31:0] scaled, q32;
+    logic [7:0]         q_core;
+
+    always_comb begin
+        mult        = $signed(in_i) * $signed(M_Q32_32);
+        mult_biased = (mult[95] >= 1'b0) ? (mult + BIAS_MAG) : (mult - BIAS_MAG);
+        shifted     = mult_biased >>> 32;
+        scaled      = shifted[31:0];
+        q32         = scaled + {{16{Z_DEF[15]}}, Z_DEF};
+        if (q32 < 0)
+            q_core = 8'd0;
+        else if (q32 > 32'sd255)
+            q_core = 8'd255;
+        else
+            q_core = q32[7:0];
+    end
+
+    // --- Simplified 3 stage pipeline với clock enable ---
+    // Stage 1: mult+bias
+    logic signed [95:0] mult_biased_reg;
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            mult_biased_reg <= '0;
+        end else if (clk_enable) begin
+            mult_biased_reg <= mult_biased;
+        end
+    end
+
+    // Stage 2: shift + addZ
+    logic signed [31:0] q32_reg;
+    logic signed [95:0] shifted_s2;
+    logic signed [31:0] scaled_s2;
+    
+    always_comb begin
+        shifted_s2 = mult_biased_reg >>> 32;
+        scaled_s2  = shifted_s2[31:0];
+    end
+    
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            q32_reg <= '0;
+        end else if (clk_enable) begin
+            q32_reg <= scaled_s2 + {{16{Z_DEF[15]}}, Z_DEF};
+        end
+    end
+
+    // Stage 3: saturate
+    always_ff @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            q_o <= 8'd0;
+        end else if (clk_enable) begin
+            if (q32_reg < 0)
+                q_o <= 8'd0;
+            else if (q32_reg > 32'sd255)
+                q_o <= 8'd255;
+            else
+                q_o <= q32_reg[7:0];
+        end
+    end
+
+endmodule
+===============================
+// ================================
+// File: quantize_int32_uint8.sv
+// ================================
+`timescale 1ns/1ps
+
+module quantize_int32_uint8 #(
+    parameter int SRAMC_W = 128,
+    parameter int ADRC_W = 11,
+    parameter int SRAMC_N = 8,
+    parameter logic [63:0] M_Q32_32 = 64'sd256,
+    parameter logic [15:0] Z_DEF    = 16'sd128
+    //parameter signed [63:0] M_Q32_32 = 64'sd1825361,
+    //parameter signed [15:0] Z_DEF = 16'sd0
+)(
+    input  logic               i_clk,
+    input  logic               i_rstn,
+    input  logic               i_in_valid,   // 128b input (4x int32)
+    input  logic [SRAMC_W-1:0] i_in_data,
+    // Control signals for delayline
+    input  logic [ADRC_W-1:0]  i_sramc_addr_q,
+    input  logic               i_sramc_wren_q,
+    input  logic [0:SRAMC_N-1] i_sramc_wmask_q,
+    output logic [ADRC_W-1:0]  o_sramc_addr_q,
+    output logic               o_sramc_wren_q,
+    output logic [0:SRAMC_N-1] o_sramc_wmask_q,
+    output logic               o_out_valid,  // 128b output (16x uint8)
+    output logic [SRAMC_W-1:0] o_out_data
+);
+    // THÊM: Logic xử lý address mapping
+    logic [12:0] address_temp;
+    logic [1:0] col;                                    // THÊM: biến col
+    logic [7:0] mapped_wmask;                           // THÊM: mapped mask
+    
+    // THÊM: Delayline 8-stage cho control signals
+    logic [7:0][ADRC_W-1:0] addr_pipe;                  // 8-stage delayline cho address
+    logic [7:0][7:0] wmask_pipe;                        // 8-stage delayline cho mapped mask
+    logic [7:0] wren_pipe;                              // 8-stage delayline cho write enable
+    
+    // Tính address_temp và col từ i_sramc_addr_q
+    always_comb begin
+        address_temp = {2'b00, i_sramc_addr_q};         // Extend i_sramc_addr_q thành 13-bit
+        col = i_sramc_addr_q[1:0];                      // col = i_sramc_addr_q mod 4 (2 LSB)
+    end
+    
+    // Logic mapping mask dựa trên col và i_sramc_wmask_q
+    always_comb begin
+        if (i_sramc_wmask_q == 8'hFF) begin
+            case (col)
+                2'b00: mapped_wmask = 8'b00000011;      // case 0: mask = 8'h03
+                2'b01: mapped_wmask = 8'b00001100;      // case 1: mask = 8'h0C
+                2'b10: mapped_wmask = 8'b00110000;      // case 2: mask = 8'h30
+                2'b11: mapped_wmask = 8'b11000000;      // case 3: mask = 8'hC0
+                default: mapped_wmask = 8'h00;
+            endcase
+        end else begin
+            mapped_wmask = i_sramc_wmask_q;             // Giữ nguyên mask gốc khi != FF
+        end
+    end
+    
+    // THÊM: Delayline 8 clk cho control signals
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) begin
+            addr_pipe  <= '{default:'0};
+            wmask_pipe <= '{default:'0};
+            wren_pipe  <= '0;
+        end else begin
+            addr_pipe  <= {addr_pipe[6:0], address_temp[12:2]};  // Shift left + new mapped address
+            wmask_pipe <= {wmask_pipe[6:0], mapped_wmask};       // Shift left + new mapped mask
+            wren_pipe  <= {wren_pipe[6:0], i_sramc_wren_q};     // Shift left + new wren
+        end
+    end
+    
+    // THAY ĐỔI: Output từ delayline stage cuối (8 clk delay)
+    assign o_sramc_addr_q  = addr_pipe[7];              // THAY ĐỔI: từ delayline thay vì trực tiếp
+    assign o_sramc_wmask_q = wmask_pipe[7];             // THAY ĐỔI: từ delayline thay vì trực tiếp
+    assign o_sramc_wren_q  = wren_pipe[7];              // THAY ĐỔI: từ delayline thay vì trực tiếp
+
+    // --- split 4 int32 lanes ---
+    wire signed [31:0] in0 = i_in_data[31:0];
+    wire signed [31:0] in1 = i_in_data[63:32];
+    wire signed [31:0] in2 = i_in_data[95:64];
+    wire signed [31:0] in3 = i_in_data[127:96];
+
+    // --- quantize 4 lanes in parallel (no input delay) ---
+    wire [7:0] q0,q1,q2,q3;
+
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u0 (.clk(i_clk), .rstn(i_rstn), .in_i(in0), .q_o(q0));
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u1 (.clk(i_clk), .rstn(i_rstn), .in_i(in1), .q_o(q1));
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u2 (.clk(i_clk), .rstn(i_rstn), .in_i(in2), .q_o(q2));
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u3 (.clk(i_clk), .rstn(i_rstn), .in_i(in3), .q_o(q3));
+
+    // --- delay valid signal for 4 pipeline stages ---
+    logic [5:0] vpipe;
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) vpipe <= 6'b0;
+        else begin
+            vpipe[0] <= i_in_valid;
+            vpipe[1] <= vpipe[0];
+            vpipe[2] <= vpipe[1];
+            vpipe[3] <= vpipe[2];
+            vpipe[4] <= vpipe[3];
+            vpipe[5] <= vpipe[4];
+        end
+    end
+    wire vq = vpipe[5];
+
+    // --- robust packer: write 4 bytes per valid, latch output only when full (16 bytes) ---
+    logic [1:0] grp_cnt = 0;
+    logic [SRAMC_W-1:0] pack_buf_reg, pack_buf_next;
+    logic pulse_r;
+    logic [SRAMC_W-1:0] o_out_data_reg;
+
+    // build next buffer value (combinational): only pack when q0–q3 differ from previous value
+    logic [7:0] q0_prev, q1_prev, q2_prev, q3_prev;
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) begin
+            q0_prev <= 8'd0;
+            q1_prev <= 8'd0;
+            q2_prev <= 8'd0;
+            q3_prev <= 8'd0;
+        end else if (vq) begin
+            q0_prev <= q0;
+            q1_prev <= q1;
+            q2_prev <= q2;
+            q3_prev <= q3;
+        end
+    end
+    
+    always_comb begin
+        pack_buf_next = pack_buf_reg;
+        if (vq && ((q0 != q0_prev) || (q1 != q1_prev) || (q2 != q2_prev) || (q3 != q3_prev))) begin
+            pack_buf_next[(grp_cnt*32)   +: 8]  = q0;
+            pack_buf_next[(grp_cnt*32)+8 +: 8]  = q1;
+            pack_buf_next[(grp_cnt*32)+16+: 8]  = q2;
+            pack_buf_next[(grp_cnt*32)+24+: 8]  = q3;
+        end
+    end
+
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) begin
+            pack_buf_reg <= '0;
+            pulse_r      <= 1'b0;
+        end else begin
+            pulse_r <= 1'b0;
+            if (vq && ((q0 != q0_prev) || (q1 != q1_prev) || (q2 != q2_prev) || (q3 != q3_prev))) begin
+                pack_buf_reg <= pack_buf_next;
+                pulse_r <= 1'b1;
+            end
+        end
+    end
+
+    // Delay o_out_data_reg 1 chu kỳ sau pack_buf_reg
+    logic [SRAMC_W-1:0] o_out_data_reg_unshifted;       // THÊM: data chưa shift
+    logic [SRAMC_W-1:0] o_out_data_reg_shifted;         // THÊM: data đã shift
+    // THÊM: Logic shift và giữ giá trị cho o_out_data_reg
+    logic [1:0] col_delayed;                            // col delayed để đồng bộ với data
+    
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) begin
+            o_out_data_reg <= '0;
+            col_delayed <= 2'b00;
+        end else begin
+            col_delayed <= col;                         // Delay col để sync với data path
+            
+            // Chỉ cập nhật khi có pulse_r (có data mới từ pack_buf_reg)
+            if (pulse_r) begin
+                case (col_delayed)
+                    2'b00: o_out_data_reg <= pack_buf_reg;         // case 0: data << 0
+                    2'b01: o_out_data_reg <= pack_buf_reg << 32;   // case 1: data << 32
+                    2'b10: o_out_data_reg <= pack_buf_reg << 64;   // case 2: data << 64
+                    2'b11: o_out_data_reg <= pack_buf_reg << 96;   // case 3: data << 96
+                    default: o_out_data_reg <= pack_buf_reg;
+                endcase
+            end
+            // Khi pulse_r = 0, giữ nguyên o_out_data_reg (giá trị cũ)
+        end
+    end
+
+    // Delay pulse_r 1 chu kỳ để đồng bộ với o_out_data_reg  
+    logic pulse_r_d1;
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) begin
+            pulse_r_d1 <= 1'b0;
+        end else begin
+            pulse_r_d1 <= pulse_r;
+        end
+    end
+
+    // OUTPUTS với delay đồng bộ
+    assign o_out_valid = pulse_r_d1;
+    assign o_out_data  = o_out_data_reg;        // Data đã được shift và giữ giá trị
+
+endmodule
+///
+// ================================
+// File: quantization.sv  
+// ================================
+`timescale 1ns/1ps
+
+/**
+ * Quantization Module with Integrated Address/Mask/Data Adjustment
+ * 
+ * This module implements:
+ * - 4-lane parallel quantization (32-bit int → 8-bit uint)
+ * - Integrated address adjustment (divide by 4)
+ * - Integrated mask/data adjustment based on address mod 4
+ * - SRAM interface compatibility with proper data placement
+ */
+
+module quantization #(
+    parameter int SRAMC_W = 128,
+    parameter int ADRC_W = 11,
+    parameter int SRAMC_N = 8,
+    parameter logic [63:0] M_Q32_32 = 64'sd256,
+    parameter logic [15:0] Z_DEF    = 16'sd128
+    //parameter logic [63:0] M_Q32_32 = 64'sd1825361,
+    //parameter logic [15:0] Z_DEF = 16'sd0
+)(
+    input  logic               i_clk,
+    input  logic               i_rstn,
+    input  logic               i_in_valid,   // 128b input (4x int32)
+    input  logic [SRAMC_W-1:0] i_in_data,
+    // Control signals for delayline
+    input  logic [ADRC_W-1:0]  i_sramc_addr_q,
+    input  logic               i_sramc_wren_q,
+    input  logic [0:SRAMC_N-1] i_sramc_wmask_q,
+    output logic [ADRC_W-1:0]  o_sramc_addr_q,
+    output logic               o_sramc_wren_q,
+    output logic [0:SRAMC_N-1] o_sramc_wmask_q,
+    // output logic               o_out_valid,  // 128b output (16x uint8)
+    output logic [SRAMC_W-1:0] o_out_data
+);
+    //=========================================================================
+    // QUANTIZATION LANES PROCESSING
+    //=========================================================================
+
+    // --- split 4 int32 lanes ---
+    wire signed [31:0] in0 = i_in_data[31:0];
+    wire signed [31:0] in1 = i_in_data[63:32];
+    wire signed [31:0] in2 = i_in_data[95:64];
+    wire signed [31:0] in3 = i_in_data[127:96];
+
+    // --- quantize 4 lanes in parallel (no input delay) ---
+    wire [7:0] q0,q1,q2,q3;
+
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u0 (.clk(i_clk), .rstn(i_rstn), .in_i(in0), .q_o(q0));
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u1 (.clk(i_clk), .rstn(i_rstn), .in_i(in1), .q_o(q1));
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u2 (.clk(i_clk), .rstn(i_rstn), .in_i(in2), .q_o(q2));
+    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u3 (.clk(i_clk), .rstn(i_rstn), .in_i(in3), .q_o(q3));
+
+    // --- Simple output: combine q0,q1,q2,q3 and output directly ---
+    logic [SRAMC_W-1:0] combined_output;
+    // Combine 4 quantized values into LSB of 128-bit output
+    always_comb begin
+        combined_output = {{96{1'b0}}, q3, q2, q1, q0};  // Pack q0-q3 into 32 LSB
+    end
+
+    //=========================================================================
+    // INTEGRATED ADJUST ADDRESS - MASK - DATA LOGIC
+    //=========================================================================
+    
+    // Delay address and mask by 6 clocks to match quantization_core pipeline latency
+    logic [ADRC_W-1:0] addr_delay [0:5];
+    logic [0:SRAMC_N-1] mask_delay [0:5];
+    logic wren_delay [0:5];
+    
+    always_ff @(posedge i_clk or negedge i_rstn) begin
+        if (!i_rstn) begin
+            for (int i = 0; i < 6; i++) begin
+                addr_delay[i] <= '0;
+                mask_delay[i] <= '0;
+                wren_delay[i] <= 1'b0;
+            end
+        end else begin
+            // Shift register for 6-clock delay
+            addr_delay[0] <= i_sramc_addr_q;
+            mask_delay[0] <= i_sramc_wmask_q;
+            wren_delay[0] <= i_sramc_wren_q;
+            
+            for (int i = 1; i < 6; i++) begin
+                addr_delay[i] <= addr_delay[i-1];
+                mask_delay[i] <= mask_delay[i-1];
+                wren_delay[i] <= wren_delay[i-1];
+            end
+        end
+    end
+    
+    // Use delayed signals for AMD logic
+    logic [ADRC_W-1:0] delayed_addr;
+    logic [0:SRAMC_N-1] delayed_mask;
+    logic delayed_wren;
+    
+    assign delayed_addr = addr_delay[5];  // 6-clock delayed address
+    assign delayed_mask = mask_delay[5];  // 6-clock delayed mask
+    assign delayed_wren = wren_delay[5];  // 6-clock delayed write enable
+    
+    logic [ADRC_W-1:0] addr_temp;
+    logic [1:0] addr_mod4;
+    logic [0:SRAMC_N-1] mask_new;
+    logic [SRAMC_W-1:0] data_new;
+    
+    always_comb begin
+        // ADDRESS ADJUSTMENT: addr_temp = delayed_address div 4
+        addr_temp = delayed_addr >> 2;  // Divide by 4 (right shift by 2)
+        
+        // Calculate delayed address modulo 4
+        addr_mod4 = delayed_addr[1:0];  // Get lower 2 bits for mod 4
+        
+        // MASK AND DATA ADJUSTMENT based on delayed address mod 4
+        // Only apply adjustment when delayed input mask is 0xFF
+        if (delayed_mask == 8'hFF) begin
+            case (addr_mod4)
+                2'b00: begin  // case 0: address mod 4 = 0
+                    mask_new = 8'b00000011;  // 0x03 - Enable lower 2 bytes
+                    data_new = {96'h0, combined_output[31:0]};  // Place data in bits [31:0]
+                end
+                
+                2'b01: begin  // case 1: address mod 4 = 1  
+                    mask_new = 8'b00001100;  // 0x0C - Enable next 4 bytes
+                    data_new = {64'h0, combined_output[31:0], 32'h0};  // Place data in bits [63:32] (shift left 32)
+                end
+                
+                2'b10: begin  // case 2: address mod 4 = 2
+                    mask_new = 8'b00110000;  // 0x30 - Enable next 4 bytes
+                    data_new = {32'h0, combined_output[31:0], 64'h0};  // Place data in bits [95:64] (shift left 64)
+                end
+                
+                2'b11: begin  // case 3: address mod 4 = 3
+                    mask_new = 8'b11000000;  // 0xC0 - Enable upper 2 bytes
+                    data_new = {combined_output[31:0], 96'h0};  // Place data in bits [127:96] (shift left 96)
+                end
+                
+                default: begin
+                    mask_new = 8'b00000000;  // Default: no write
+                    data_new = 128'h0;
+                end
+            endcase
+        end else begin
+            // Pass through delayed mask and combined_output when delayed mask is not 0xFF
+            mask_new = delayed_mask;
+            data_new = combined_output;
+        end
+    end
+
+    // OUTPUTS - Use adjusted values with delayed control signals
+    assign o_sramc_addr_q  = addr_temp;        // Adjusted address (delayed addr div 4)
+    assign o_sramc_wren_q  = delayed_wren;     // Delayed write enable  
+    assign o_sramc_wmask_q = mask_new;         // Adjusted mask
+    assign o_out_data      = data_new;         // Adjusted data
+
+endmodule
