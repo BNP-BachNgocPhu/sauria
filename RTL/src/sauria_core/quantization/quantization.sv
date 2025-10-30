@@ -4,19 +4,19 @@
 `timescale 1ns/1ps
 
 /**
- * Quantization Module - 4-Lane Parallel with AMD Logic
+ * Quantization Module - 32-Lane Parallel with AMD Logic (Tmoby)
  * 
  * Features:
- * - 4-lane parallel quantization (32-bit → 8-bit)
- * - Address adjustment (divide by 4)
+ * - 32-lane parallel quantization (32-bit → 8-bit) for 1024-bit data
+ * - Address adjustment (divide by 4)  
  * - Data/mask positioning based on address mod 4
  * - 6-clock pipeline with synchronized control
  */
 
 module quantization #(
-    parameter int SRAMC_W = 128,                           // SRAM data width
-    parameter int ADRC_W = 11,                             // SRAM address width
-    parameter int SRAMC_N = 8,                             // SRAM mask elements
+    parameter int SRAMC_W = 1024,                          // SRAM data width (Tmoby: 1024-bit)
+    parameter int ADRC_W = 12,                             // SRAM address width (Tmoby: 12-bit)
+    parameter int SRAMC_N = 32,                            // SRAM mask elements (Tmoby: 32 elements)
     parameter logic [63:0] M_Q32_32 = 64'sd256,           // Scale factor
     parameter logic [15:0] Z_DEF    = 16'sd128             // Zero point
     //parameter logic [63:0] M_Q32_32 = 64'sd1825361,
@@ -27,7 +27,7 @@ module quantization #(
     input  logic               i_rstn,
 
     // Input interface
-    input  logic [SRAMC_W-1:0] i_sramc_wdata_q,           // Input data (4×32-bit)
+    input  logic [SRAMC_W-1:0] i_sramc_wdata_q,           // Input data (32×32-bit for 1024-bit)
     input  logic [ADRC_W-1:0]  i_sramc_addr_q,            // Input address
     input  logic               i_sramc_wren_q,            // Write enable
     input  logic [0:SRAMC_N-1] i_sramc_wmask_q,           // Write mask
@@ -41,27 +41,35 @@ module quantization #(
     output logic               o_sramc_rden_q             // Read enable
 );
     //=========================================================================
-    // 4-LANE PARALLEL QUANTIZATION
+    // 32-LANE PARALLEL QUANTIZATION (Tmoby: 1024-bit → 32×32-bit → 32×8-bit)
     //=========================================================================
 
-    // Split 128-bit input into 4×32-bit lanes
-    wire signed [31:0] in0 = i_sramc_wdata_q[31:0];
-    wire signed [31:0] in1 = i_sramc_wdata_q[63:32];
-    wire signed [31:0] in2 = i_sramc_wdata_q[95:64];
-    wire signed [31:0] in3 = i_sramc_wdata_q[127:96];
+    // Split 1024-bit input into 32×32-bit lanes
+    wire signed [31:0] in_lanes [0:31];
+    generate
+        for (genvar i = 0; i < 32; i++) begin : gen_input_lanes
+            assign in_lanes[i] = i_sramc_wdata_q[(i+1)*32-1:i*32];
+        end
+    endgenerate
 
-    // Quantize 4 lanes in parallel
-    wire [7:0] q0,q1,q2,q3;
+    // Quantize 32 lanes in parallel
+    wire [7:0] q_lanes [0:31];
+    generate
+        for (genvar i = 0; i < 32; i++) begin : gen_quant_cores
+            quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) 
+                quant_core_i (.clk(i_clk), .rstn(i_rstn), .in_i(in_lanes[i]), .q_o(q_lanes[i]));
+        end
+    endgenerate
 
-    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u0 (.clk(i_clk), .rstn(i_rstn), .in_i(in0), .q_o(q0));
-    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u1 (.clk(i_clk), .rstn(i_rstn), .in_i(in1), .q_o(q1));
-    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u2 (.clk(i_clk), .rstn(i_rstn), .in_i(in2), .q_o(q2));
-    quantization_core #(.M_Q32_32(M_Q32_32), .Z_DEF(Z_DEF)) u3 (.clk(i_clk), .rstn(i_rstn), .in_i(in3), .q_o(q3));
-
-    // Combine quantized outputs (replicated pattern)
+    // Combine quantized outputs (4× replication pattern for 1024-bit)
     logic [SRAMC_W-1:0] combined_output;
     always_comb begin
-        combined_output = {q3, q2, q1, q0, q3, q2, q1, q0, q3, q2, q1, q0, q3, q2, q1, q0};
+        // Replicate 32×8-bit = 256-bit pattern 4 times to fill 1024-bit
+        for (int i = 0; i < 4; i++) begin
+            for (int j = 0; j < 32; j++) begin
+                combined_output[(i*256)+(j+1)*8-1:(i*256)+j*8] = q_lanes[j];
+            end
+        end
     end
 
     //=========================================================================
@@ -116,14 +124,14 @@ module quantization #(
         addr_temp = delayed_addr >> 2;
         addr_mod4 = delayed_addr[1:0];  // Address mod 4
         
-        // Mask adjustment based on address mod 4
-        if (delayed_mask == 8'hFF) begin
+        // Mask adjustment based on address mod 4 (32-bit mask support)
+        if (delayed_mask == {SRAMC_N{1'b1}}) begin  // All bits set (32'hFFFFFFFF for 32-bit)
             case (addr_mod4)
-                2'b00: mask_new = 8'b00000011;  // 0x03 - Lower 2 bytes
-                2'b01: mask_new = 8'b00001100;  // 0x0C - Next 2 bytes
-                2'b10: mask_new = 8'b00110000;  // 0x30 - Next 2 bytes
-                2'b11: mask_new = 8'b11000000;  // 0xC0 - Upper 2 bytes
-                default: mask_new = 8'b00000000;
+                2'b00: mask_new = {{(SRAMC_N-8){1'b0}}, 8'b11111111};    // Lower 8 bits
+                2'b01: mask_new = {{(SRAMC_N-16){1'b0}}, 8'b11111111, 8'b00000000};  // Next 8 bits  
+                2'b10: mask_new = {{(SRAMC_N-24){1'b0}}, 8'b11111111, 16'b0000000000000000}; // Next 8 bits
+                2'b11: mask_new = {8'b11111111, {(SRAMC_N-8){1'b0}}};     // Upper 8 bits
+                default: mask_new = '0;
             endcase
         end else begin
             mask_new = delayed_mask;  // Pass through

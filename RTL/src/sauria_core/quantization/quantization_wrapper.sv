@@ -1,13 +1,13 @@
 /**
- * Quantization Wrapper - SRAM Interface Adapter
+ * Quantization Wrapper - SRAM Interface Adapter (Updated for Tmoby)
  * 
  * Simple wrapper connecting quantization module to SRAM interface.
  * Passes through control signals with quantized data output.
  */
 module quantization_wrapper #(
-    parameter int SRAMC_W = 128,    // SRAM data width
-    parameter int ADRC_W = 11,      // SRAM address width  
-    parameter int SRAMC_N = 8       // SRAM mask elements
+    parameter int SRAMC_W = 1024,    // SRAM data width (Tmoby: 1024-bit)
+    parameter int ADRC_W = 12,       // SRAM address width (Tmoby: 12-bit)
+    parameter int SRAMC_N = 32       // SRAM mask elements (Tmoby: 32 elements)
 )(
     // Clock and reset
     input  logic                   i_clk,
@@ -34,7 +34,11 @@ module quantization_wrapper #(
     // maintaining timing synchronization for control signals
     //=========================================================================
     
-    quantization quant_core (
+    quantization #(
+        .SRAMC_W    (SRAMC_W),
+        .ADRC_W     (ADRC_W),
+        .SRAMC_N    (SRAMC_N)
+    ) quant_core (
         .i_clk             (i_clk),
         .i_rstn            (i_rstn),
 
